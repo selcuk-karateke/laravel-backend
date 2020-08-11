@@ -171,3 +171,5 @@ Route::get('/schedule', function () {
 
     return view('schedule.index', compact('data','date'));
 });
+
+Route::get('/dbtest', 'TestController@dbTest');

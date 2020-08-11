@@ -13,7 +13,6 @@
         <style>
 html, body {
     background-color: #fff;
-    color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
@@ -23,6 +22,7 @@ html, body {
 h1,p {
 
     margin: 0;
+    color: black;
 }
 
 .title {
@@ -31,7 +31,7 @@ h1,p {
 }
 
 .links > a {
-    color: #636b6f;
+    color: black;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
@@ -99,7 +99,7 @@ footer {
     display: grid;
     grid-template-rows:auto;
     grid-template-columns:11% 10% 15% 8% 8% 8% 20% 20%;
-    background:gold;
+    background:lightgoldenrodyellow;
     padding: 10px;
 }
 .project div{
@@ -109,7 +109,7 @@ footer {
     display: grid;
     grid-template-rows:auto;
     grid-template-columns:10% 15% 15% 15% 15% 15% 15%;
-    background:gold;
+    background:lightgoldenrodyellow;
     padding: 10px;
 }
 </style>
@@ -120,7 +120,7 @@ footer {
                 <p class="title">Laravel</p>
             </header>
             <header2 class="flex-center m-b-md">
-                <h2>{{ $date->isoformat('dddd') }}</h2>
+                <h2>{{ isset($date) ? $date->isoformat('dddd') : 'Date fehlt' }}</h2>
             </header2>
             <main>
                 <div class="m-b-md">
