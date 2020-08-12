@@ -8,9 +8,9 @@ if ($mysqli->connect_errno) {
 
 
 /*$res = $mysqli->query("CREATE TABLE testtbl (
-testspl1 INT(255) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK' , 
-testspl2 VARCHAR(255) NULL COMMENT 'header' , 
-testspl3 TEXT NULL COMMENT 'content' , 
+testspl1 INT(255) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK' ,
+testspl2 VARCHAR(255) NULL COMMENT 'header' ,
+testspl3 TEXT NULL COMMENT 'content' ,
 PRIMARY KEY (`testspl1`)) ENGINE = InnoDB;  "); */
 
 //$res = $mysqli->query("INSERT INTO exercises (`id`, `name`, `date`, `created`) VALUES (NULL, 'Hans', '2000-01-01', CURRENT_TIMESTAMP)");
@@ -33,7 +33,16 @@ while($row = mysqli_fetch_array($res))
 <body>
     <h1>
         <?php
-        /*@todo mach mal was*/
+        /*@todo
+        formular erstellen
+        meldung anzeigen
+        liste auslesen
+        zeile einfügen
+        zeile editieren
+        config/database.php
+        .env
+        db testen
+        */
         echo "Hello World";
         ?>
     </h1>

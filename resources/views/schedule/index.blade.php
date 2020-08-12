@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href='{{ url('/') }}'>Home</a>
+<p><a href='{{ url('/') }}'>Home</a></p><br/>
+<p><a href='{{ url('/dbtest') }}'>DB Test</a></p>
+
 @endsection
 
 @section('projects')

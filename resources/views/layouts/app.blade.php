@@ -131,7 +131,7 @@ footer {
                     <div class="flex-center m-b-md">
                         <h2>Nav</h2>
                     </div>
-                    <div class="flex-center m-b-md">
+                    <div class="">
                         @yield('content')
                     </div>
                 </aside>
