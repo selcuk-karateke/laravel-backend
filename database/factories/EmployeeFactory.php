@@ -14,6 +14,8 @@ $factory->define(Employee::class, function (Faker $faker) {
     return [
         'forename' => $faker->firstName,
         'surename' => $faker->lastName,
-        'role_id' => rand(1,3),
+        'role_id' => $faker->numberBetween(1,4),
+        'email' => $faker->unique()->safeEmail,
+        'www' => $faker->unique()->domainName,
     ];
 });

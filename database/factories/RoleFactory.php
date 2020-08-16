@@ -10,6 +10,6 @@ use Illuminate\Support\Str;
 $factory->define(Role::class, function (Faker $faker) {
 //            'id'=>$id,
     return [
-        'name' => $faker->randomElement(['administrator','programmer','tester']),
+        'name' => $faker->randomElement(['administrator','manager','programmer','tester']),
     ];
 });

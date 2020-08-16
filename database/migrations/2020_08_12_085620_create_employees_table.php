@@ -17,6 +17,8 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('forename');
             $table->string('surename');
+            $table->string('email')->unique()->nullable();
+            $table->string('www')->unique()->nullable();
             $table->foreignId('role_id');
             //$table->unsignedBigInteger('role_id');
             $table->foreign('role_id')->references('id')->on('roles');

@@ -11,11 +11,17 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-//        $id = DB::getPDO()->lastInsertId();
         //
-        DB::table('roles')->insert([
-//            'id'=>$id,
-            'name'=>''
-        ]);
+        DB::table('roles')->insert(['name'=>'administrator',]);
+        DB::table('roles')->insert(['name'=>'manager',]);
+        DB::table('roles')->insert(['name'=>'programmer',]);
+        DB::table('roles')->insert(['name'=>'tester',]);
     }
 }
+
+/*
+ * @todo
+ *
+ * Komplett neu aufsetzen
+ *
+ * */

@@ -17,14 +17,14 @@ class Kernel extends ConsoleKernel
     ];
 
     /**
-     * Define the application's command schedule.
+     * Define the application's command tasks.
      *
      * @param Schedule $schedule
      * @return void
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // $tasks->command('inspire')->hourly();
     }
 
     /**

@@ -15,15 +15,17 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->char('shortcut', 9);
-            $table->integer('calendar_week');
+
             $table->foreignId('employee_id');
             //$table->unsignedBigInteger('employee_id');
             $table->foreign('employee_id')->references('id')->on('employees');
-            $table->integer('estimated_hours');
+
+            $table->foreignId('project_id');
+            //$table->unsignedBigInteger('project_id');
+            $table->foreign('project_id')->references('id')->on('projects');
+
+            $table->integer('calendar_week');
             $table->datetime('workonday');
-            $table->date('dead');
             $table->timestamps();
         });
     }

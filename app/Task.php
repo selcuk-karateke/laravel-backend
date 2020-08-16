@@ -12,12 +12,9 @@ class Task extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
-        'shortcut',
+//        'employee_id',
+//        'project_id',
         'calendar_week',
-        'employee_id',
-        'estimated_hours',
         'workonday',
-        'dead'
     ];
 }
