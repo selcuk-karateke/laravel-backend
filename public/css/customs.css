@@ -1,0 +1,101 @@
+html, body {
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    margin: 0;
+}
+
+h1, p {
+
+    margin: 0;
+    color: black;
+}
+
+input, textarea, select {
+    border-radius: 0 !important;
+    border-color: lightblue !important;
+}
+
+table {
+    width:100% !important;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: lavender;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.title {
+    color: black;
+    font-size: 4rem;
+    padding: 5px;
+}
+
+.sub-title {
+    color: black;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.links > a {
+    color: black;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.flex-1 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.flex-2 {
+    align-items: center;
+    justify-content: center;
+}
+.flex-3 {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-1 {
+    /*height: 10vh;*/
+    vertical-align: middle;
+    background: lightgoldenrodyellow;
+}
+
+.head-2 {
+    vertical-align: middle;
+    background: lightcoral;
+    color: white;
+    padding: 10px;
+}
+.main {
+    /*height: 79vh;*/
+    background: white;
+    margin-bottom: 4rem;
+    padding: 10px;
+}
+.aside {
+    background: lightgreen;
+    padding: 10px;
+}
+.foot-1 {
+    background: lightcyan;
+    padding: 10px;
+}
+.foot-2 {
+    background: lightseagreen;
+    color: white;
+    padding: 10px;
+}

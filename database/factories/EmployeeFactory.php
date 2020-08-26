@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/** @var Factory $factory */
 
 use App\Employee;
 use Faker\Generator as Faker;
@@ -14,8 +14,9 @@ $factory->define(Employee::class, function (Faker $faker) {
     return [
         'forename' => $faker->firstName,
         'surename' => $faker->lastName,
-        'role_id' => $faker->numberBetween(1,4),
-        'email' => $faker->unique()->safeEmail,
-        'www' => $faker->unique()->domainName,
+        'user_id' => null,
+//        'user_id' => $faker->numberBetween(1,4),
+//        'email' => $faker->unique()->safeEmail,
+//        'www' => $faker->unique()->domainName,
     ];
 });

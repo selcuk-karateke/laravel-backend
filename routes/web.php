@@ -1,9 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Carbon\Carbon;
-use App\Task;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -15,167 +14,25 @@ use App\Task;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
+//Route::get('/', function () { return view('welcome'); });
+
 Route::get('/', function () {
-    return view('welcome');
-});
-*/
-Route::get('/', function () {
-    /*$data = array(
-        'projects'=>array(
-            'p1'=>array(
-                'name' => 'OnlineShop',
-                'manager'=>'Test Tester',
-                'shortcut'=>'OSY1',
-                'details'=>array(
-                    'start'=>"09.12.2010",
-                    'dead'=>"31.12.2025",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            ),
-            'p2'=>array(
-                'name' => 'SEO Project',
-                'manager'=>'Bernd Tester',
-                'shortcut'=>'SPZ1',
-                'details'=>array(
-                    'start'=>"10.08.2020",
-                    'dead'=>"31.12.2022",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            ),
-            'p3'=>array(
-                'name' => 'OnlineShop',
-                'manager'=>'Jürgen Tester',
-                'shortcut'=>'OSZ1',
-                'details'=>array(
-                    'start'=>"02.08.2020",
-                    'dead'=>"04.08.2020",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            ),
-            'p4'=>array(
-                'name' => 'Portfolio',
-                'manager'=>'Berna Tester',
-                'shortcut'=>'PXZ2',
-                'details'=>array(
-                    'start'=>"12.12.2020",
-                    'dead'=>"31.12.2020",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            ),
-            'p5'=>array(
-                'name' => 'Web Application',
-                'manager'=>'Jürgen Tester',
-                'shortcut'=>'WAZ1',
-                'details'=>array(
-                    'start'=>"10.08.2020",
-                    'dead'=>"15.08.2020",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            ),
-            'p6'=>array(
-                'name' => 'Webdesign',
-                'manager'=>'',
-                'shortcut'=>'WDZ2',
-                'details'=>array(
-                    'start'=>"12.08.2020",
-                    'dead'=>"31.12.2020",
-                    'mail'=>"customer@zentralweb.de",
-                    'link'=>'www.test.de'
-                )
-            )
-        )
-    );*/
     $date = Carbon::now();
     return view('welcome', compact('date'));
 });
 
 Route::resource('/projects', 'ProjectsController');
-Route::get('/tasks', 'TasksController@index')->name('task');
+Route::resource('/users', 'UsersController');
+Route::resource('/tasks', 'TasksController');
 
-//Route::get('/tasks', function () {
-//    $data = array(
-//        'projects'=>array(
-//            'p1'=>array(
-//                'name' => 'OnlineShop',
-//                'manager'=>'Test Tester',
-//                'shortcut'=>'OSY1',
-//                'details'=>array(
-//                    'start'=>"09.12.2010",
-//                    'dead'=>"31.12.2025",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            ),
-//            'p2'=>array(
-//                'name' => 'SEO Project',
-//                'manager'=>'Bernd Tester',
-//                'shortcut'=>'SPZ1',
-//                'details'=>array(
-//                    'start'=>"10.08.2020",
-//                    'dead'=>"31.12.2022",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            ),
-//            'p3'=>array(
-//                'name' => 'OnlineShop',
-//                'manager'=>'Jürgen Tester',
-//                'shortcut'=>'OSZ1',
-//                'details'=>array(
-//                    'start'=>"02.08.2020",
-//                    'dead'=>"04.08.2020",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            ),
-//            'p4'=>array(
-//                'name' => 'Portfolio',
-//                'manager'=>'Berna Tester',
-//                'shortcut'=>'PXZ2',
-//                'details'=>array(
-//                    'start'=>"12.12.2020",
-//                    'dead'=>"31.12.2020",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            ),
-//            'p5'=>array(
-//                'name' => 'Web Application',
-//                'manager'=>'Jürgen Tester',
-//                'shortcut'=>'WAZ1',
-//                'details'=>array(
-//                    'start'=>"10.08.2020",
-//                    'dead'=>"15.08.2020",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            ),
-//            'p6'=>array(
-//                'name' => 'Webdesign',
-//                'manager'=>'',
-//                'shortcut'=>'WDZ2',
-//                'details'=>array(
-//                    'start'=>"12.08.2020",
-//                    'dead'=>"31.12.2020",
-//                    'mail'=>"customer@zentralweb.de",
-//                    'link'=>'www.test.de'
-//                )
-//            )
-//        )
-//    );
-//    $date = Carbon::now();
-//
-//    return view('tasks.index', compact('data','date'));
-//});
+Route::post('/tasks/post', 'TasksController@store');
 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/dbtest', 'TestController@dbTest');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Test
+Route::view('/grocery', 'grocery')->name('grocery');
+Route::post('/grocery/post', 'GroceriesController@store');

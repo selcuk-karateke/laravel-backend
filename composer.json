@@ -16,7 +16,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "laravelcollective/html": "^6.1",
-        "twbs/bootstrap": "^4.5"
+        "twbs/bootstrap": "^4.5",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

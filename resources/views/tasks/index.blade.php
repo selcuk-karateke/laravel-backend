@@ -1,5 +1,5 @@
 @php
-    $date = Carbon\Carbon::now();
+    $date = Carbon\Carbon::now()
 @endphp
 
 @extends('layouts.app')
@@ -12,8 +12,12 @@
 
 @endsection
 
-@section('content')
-    <div class="table-responsive-xl">
+@section('section-1')
+    asdf
+@endsection
+
+@section('section-2')
+    <div class="table-responsive">
         <table class="table table-hover">
             <thead>
             <tr>
@@ -58,4 +62,8 @@
             </tbody>
         </table>
     </div>
+@endsection
+
+@section('section-3')
+    asdf
 @endsection

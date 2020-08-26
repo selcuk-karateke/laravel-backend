@@ -2,24 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\JsonResponse;
+use App\User;
 use Illuminate\Http\Request;
-// Models
-use App\Employee;
-use App\Task;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
-class TasksController extends Controller
+class UsersController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -27,10 +17,11 @@ class TasksController extends Controller
      */
     public function index()
     {
-        //
-        $employees = Employee::all();
-        $tasks = Task::all();
-        return view('tasks.index', compact('employees', 'tasks'));
+        $data = User::all();
+//        dd($data);
+        // Array aufbauen
+
+        return view('users.index', compact('data'));
     }
 
     /**
@@ -40,32 +31,39 @@ class TasksController extends Controller
      */
     public function create()
     {
+        $data = DB::table('employees')
+        ->select(
+            'id',
+            'forename',
+            'surename',
+            'user_id'
+        )
+        ->get();
         //
-        return view('tasks.create');
+        return view('users.create', compact('data'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return JsonResponse
+     * @return Response
      */
     public function store(Request $request)
     {
         //
-        Task::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'employee_id' => 1,
-            'status' => $request->status,
-            'estimated_hours' => $request->estimated_hours,
-            'actual_hours' => $request->actual_hours,
-            'shortcut' => $request->shortcut,
-            'start' => $request->start,
-            'dead' => $request->dead,
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-        return response()->json(['success'=>'Data is successfully added']);
-//        return redirect('/tasks');
+        //
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        return redirect('/users');
     }
 
     /**
@@ -77,7 +75,6 @@ class TasksController extends Controller
     public function show($id)
     {
         //
-        return '';
     }
 
     /**
@@ -89,7 +86,6 @@ class TasksController extends Controller
     public function edit($id)
     {
         //
-        return '';
     }
 
     /**
@@ -102,7 +98,6 @@ class TasksController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return '';
     }
 
     /**
@@ -114,6 +109,5 @@ class TasksController extends Controller
     public function destroy($id)
     {
         //
-        return '';
     }
 }

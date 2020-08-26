@@ -16,19 +16,17 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
+            $table->boolean('from_api');
+            $table->text('description')->nullable();
+            $table->text('descr_short')->nullable();
 //            $table->string('manager');
 //            $table->string('programmer');
 //            $table->string('tester');
-
-            $table->foreignId('employee_id');
-            //$table->unsignedBigInteger('employee_id');
-            $table->foreign('employee_id')->references('id')->on('employees');
-
             $table->char('shortcut', 9);
-            $table->integer('estimated_hours');
+            $table->integer('estimated_hours')->nullable(); // Geschätzte Stunden
+            $table->integer('actual_hours')->nullable(); // Tatsächliche Stunden
             $table->date('start');
-            $table->date('dead');
+            $table->date('dead')->nullable();
 
             $table->timestamps();
         });

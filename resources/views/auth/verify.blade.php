@@ -5,10 +5,24 @@
 @section('aside')
 
 @endsection
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+@section('section-1')
+    <div style="height: 80vh;">
+        <div class="links">
+            <a href="{{ route('login') }}">Login</a>
+            <a href="{{ route('register') }}">Register</a>
+        </div>
+        <div class="title">
+            @if (Route::has('login'))
+                @auth
+                    {{ __('Hi') }}, {{ Auth::user()->name }}!
+                @else
+                    {{ __('Welcome') }}, Stranger!
+                @endauth
+            @endif
+        </div>
+        <div class="sub-title">
+            Register Page.
+        </div>
             @if (session('resent'))
                 <div class="alert alert-success" role="alert">
                     {{ __('A fresh verification link has been sent to your email address.') }}
@@ -21,7 +35,5 @@
                 @csrf
                 <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
             </form>
-        </div>
     </div>
-</div>
 @endsection

@@ -2,14 +2,16 @@
     <th scope="row">{{$project->id}}</th>
     <td>
         <h2 style="margin-bottom: 0px">{{$project->name}}</h2>
-        <br/>Estim. Hours:
-        {{$project->estimated_hours}}
+        <br/>Description:
+        {{$project->description}}
         <br/>Manager:
-        {{$project->employee_id}}
+        @foreach($project->employees as $employee)
+            {{$employee->from_api}}
+        @endforeach
     </td>
     <td>{{$project->shortcut}}</td>
-    <td>{{$project->description}}</td>
-    <td>{{$project->days}}<br/>
+    <td>{{$project->estimated_hours}}</td>
+    <td>Total: {{$project->days}} Days<br/>
     @php
         use Carbon\Carbon;
         $start = Carbon::parse($project->start);
@@ -17,25 +19,30 @@
         $dead = Carbon::parse($project->dead);
 
         $diffStartEnd = $start->diffInHours($dead);
-        $diffNowEnd = $today->diffInHours($dead);
+        $diffNowEnd = $today->diffInHours($dead)
+
     @endphp
 
-    @if($start->greaterThanOrEqualTo($today))
-            <br/>   {{ "Hold On" }}
-    @endif
+        @if($start->isAfter($today))
+            <i class="far fa-hand-paper fa-fw"></i> <span style="color: darkorange"><b>{{ "Hold On" }}</b></span><br/>
+        @endif
 
-    @if($dead->lessThanOrEqualTo($today))
-            <br/>{{ "Time Over" }}
-    @endif
-        <br/>{{ $diffStartEnd." / ".$diffNowEnd }}
+        @if($dead->lessThanOrEqualTo($today))
+            <i class="far fa-calendar-check fa-fw"></i> <span style="color: darkred"><b>{{ "Time Over" }}</b></span><br/>
+        @endif
+
+        @if($today->between($start, $dead))
+            <br/>Total: {{ $diffStartEnd }} h
+            <br/>Left: {{ $diffNowEnd }} h
+        @endif
     </td>
     <td>{{$project->start}}</td>
     <td>{{$project->dead}}</td>
     <td>
         E-Mail:<br/>
-        {{$project->employee_id}}<br/>
+{{--        {{$email}}<br/>--}}
         WWW:<br/>
-        {{$project->employee_id}}
+{{--        {{$www}}--}}
     </td>
     <td>
         <a class="btn btn-primary" href="{{ route('projects.show', $project->id) }}">Show</a> |
