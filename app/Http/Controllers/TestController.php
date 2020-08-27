@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Task;
+use App\Project;
 use DB;
 use App\Http\Controllers\Controller;
 
@@ -16,6 +18,12 @@ class TestController
         var_dump($results);
 
 
+    }
+
+    public function paginate(){
+        $projects = Project::paginate(5);
+        return view('results', compact('projects'));
+//        return view('results', ['projects'=>$projects]);
     }
 
 }

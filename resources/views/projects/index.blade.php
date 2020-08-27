@@ -103,9 +103,11 @@
             @endforeach
             </tbody>
         </table>
+{{--        {!! $projects->render() !!}--}}
     @else
         <br/>
         <h1 class="flex-1">No Data</h1>
     @endif
 </div>
+
 @endsection

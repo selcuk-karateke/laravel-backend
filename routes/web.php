@@ -29,7 +29,8 @@ Route::resource('/tasks', 'TasksController');
 Route::post('/tasks/post', 'TasksController@store');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/dbtest', 'TestController@dbTest');
+
+Route::get('/paginate', 'TestController@paginate')->name('paginate');
 
 Auth::routes();
 

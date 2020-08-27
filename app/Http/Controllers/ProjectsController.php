@@ -82,6 +82,7 @@ class ProjectsController extends Controller
 
         // Get all projects
         $projects = Project::all()->sortBy('dead');
+//        $projects = Project::paginate(5);
 
         // Get all shortcuts to update them
         $shortcuts = array();
@@ -103,7 +104,7 @@ class ProjectsController extends Controller
                 // Update all Shortcuts
                 $project = Project::find($id);
 
-                // IF Fehlt
+                // If From API
                 if($project->from_api == 1){
                     $project->dead = isset($json['fields']['duedate']) ? $json['fields']['duedate'] : null;
 //                dd($project->dead);
@@ -187,7 +188,7 @@ class ProjectsController extends Controller
                 'from_api' => '',
                 'description' => 'required',
                 'descr_short' => '',
-                'shortcut' => 'required',
+                'shortcut' => 'required|unique:projects',
                 'estimated_hours' => 'required',
                 'actual_hours' => 'required',
                 'start' => 'nullable|date',
@@ -339,14 +340,14 @@ class ProjectsController extends Controller
     public function jiraApi($shortcut){
 //
         if (isset($shortcut)) {
-            $url = 'https://zentralweb.atlassian.net/rest/agile/1.0/issue/' . $shortcut;
+            $url = env('JIRA_URL') . $shortcut;
+//            $url = 'https://zentralweb.atlassian.net/rest/agile/1.0/issue/' . $shortcut;
         } else {
-            $url = 'https://zentralweb.atlassian.net/rest/agile/1.0/issue/HKD-100';
+            $url = env('JIRA_URL') . 'HKD-100';
         }
-
         $response = Http::withHeaders([
-            "Content-Type" => "application/json",
-            "Authorization" => "Basic Y29kZUB6ZW50cmFsd2ViLmRlOm1qaFVrRjlTNmRjdnhpRGxveGhCRkMwMQ=="
+            "Content-Type" => env('JIRA_CONTENT_TYPE'),
+            "Authorization" => env('JIRA_AUTHORIZATION')
         ])
             ->get($url);
         $json = json_encode($response->json());
