@@ -20,4 +20,8 @@ class Employee extends Model
         'email',
         'www',
     ];
+    //
+    public function roles(){
+        return $this->hasMany('App\Role');
+    }
 }
