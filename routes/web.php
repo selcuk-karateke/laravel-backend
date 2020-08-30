@@ -37,3 +37,9 @@ Auth::routes();
 // Test
 Route::view('/grocery', 'grocery')->name('grocery');
 Route::post('/grocery/post', 'GroceriesController@store');
+
+// Test API JSON
+Route::get('/json/{shortcut}', 'ProjectsController@jiraApi');
+
+Route::get('/get-projects', 'ProjectsController@getProjects');
+
