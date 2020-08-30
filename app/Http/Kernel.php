@@ -34,15 +34,16 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
-    protected $middleware = [
-        // \App\Http\Middleware\TrustHosts::class,
-        TrustProxies::class,
-        HandleCors::class,
-        CheckForMaintenanceMode::class,
-        ValidatePostSize::class,
-        TrimStrings::class,
-        ConvertEmptyStringsToNull::class,
-    ];
+protected $middleware = [
+    // \App\Http\Middleware\TrustHosts::class,
+    TrustProxies::class,
+    HandleCors::class,
+    CheckForMaintenanceMode::class,
+    ValidatePostSize::class,
+    TrimStrings::class,
+    ConvertEmptyStringsToNull::class,
+    \App\Http\Middleware\Cors::class,
+];
 
     /**
      * The application's route middleware groups.
@@ -84,5 +85,6 @@ class Kernel extends HttpKernel
         'signed' => ValidateSignature::class,
         'throttle' => ThrottleRequests::class,
         'verified' => EnsureEmailIsVerified::class,
+//        'cors' => \App\Http\Middleware\Cors::class,
     ];
 }

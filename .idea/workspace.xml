@@ -23,14 +23,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="488cd490-b14d-4cf3-8330-8058d6e95e00" name="Default Changelist" comment="Big Update!!">
+    <list default="true" id="488cd490-b14d-4cf3-8330-8058d6e95e00" name="Default Changelist" comment="Add function to allow employees to assign a role.">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Cors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/results.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +174,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -217,7 +215,13 @@
       <workItem from="1598249312456" duration="39952000" />
       <workItem from="1598337473678" duration="60764000" />
       <workItem from="1598508477689" duration="2894000" />
-      <workItem from="1598512795962" duration="4009000" />
+      <workItem from="1598512795962" duration="9103000" />
+      <workItem from="1598554412442" duration="1715000" />
+      <workItem from="1598557032452" duration="4100000" />
+      <workItem from="1598594993751" duration="2288000" />
+      <workItem from="1598615459436" duration="8873000" />
+      <workItem from="1598734544924" duration="2770000" />
+      <workItem from="1598776819542" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="INitial Commit FAiled">
       <created>1597132366052</created>
@@ -275,7 +279,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598445830962</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Make Shortcuts Unique">
+      <created>1598518206376</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598518206376</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add new route to make all projects accessible to Vue.js">
+      <created>1598777267175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598777267175</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add function to allow employees to assign a role.">
+      <created>1598777401031</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598777401031</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +327,10 @@
     <MESSAGE value="Update&#10;&#10;Faker&#10;Seeder" />
     <MESSAGE value="CRUD Logik hinzugefügt" />
     <MESSAGE value="Big Update!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big Update!!" />
+    <MESSAGE value="Make Shortcuts Unique" />
+    <MESSAGE value="Add new route to make all projects accessible to Vue.js" />
+    <MESSAGE value="Add function to allow employees to assign a role." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add function to allow employees to assign a role." />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="206" key="#Inspections" timestamp="1597928592362">
@@ -369,10 +397,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="926" y="182" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1597304702309" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1598445841419">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1598518213154">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598445841419" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598518213154" />
     <state x="1261" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597324655848">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -381,14 +409,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="669" y="151" width="581" height="747" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598357333565" />
-    <state x="858" y="438" key="publish.login" timestamp="1598513630640">
+    <state x="858" y="438" key="publish.login" timestamp="1598735195048">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="858" y="438" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1598513630640" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1597838860356">
+    <state x="858" y="438" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1598735195048" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1598537696728">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1597838860356" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598537696728" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1597777193889">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
