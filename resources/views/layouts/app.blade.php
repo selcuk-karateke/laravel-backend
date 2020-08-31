@@ -25,7 +25,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-xl-10 head-1">
-            <span class="title">Laravel</span>
+            <span class="title">Laravel - Backend</span>
         </div>
         <div class="col-12 col-xl-2 head-2 flex-1">
             <div class="links text-white">

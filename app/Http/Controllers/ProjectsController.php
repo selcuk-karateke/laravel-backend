@@ -37,7 +37,7 @@ class ProjectsController extends Controller
                     'id',
                     'name',
                     'description',
-                    'employee_id',
+//                    'employee_id',
                     'shortcut',
                     'estimated_hours',
                     'start',
@@ -269,7 +269,7 @@ class ProjectsController extends Controller
                 'name',
                 'description',
                 'status',
-                'employee_id',
+//                'employee_id',
                 'project_id',
                 'estimated_hours',
                 'real_hours',
@@ -338,18 +338,18 @@ class ProjectsController extends Controller
      * @return array
      */
     public function jiraApi($shortcut){
-//
-        if (isset($shortcut)) {
-            $url = env('JIRA_URL') . $shortcut;
-//            $url = 'https://zentralweb.atlassian.net/rest/agile/1.0/issue/' . $shortcut;
-        } else {
-            $url = env('JIRA_URL') . 'HKD-100';
-        }
+        // Create Base64 Key
+//        echo $base = env('JIRA_USER').":".env('JIRA_PASS');
+//        dd(base64_encode($base));
+        //
+        $url = env('JIRA_URL');
+        $url = isset($shortcut) ? $url . $shortcut : $url . 'HKD-100';
+
         $response = Http::withHeaders([
             "Content-Type" => env('JIRA_CONTENT_TYPE'),
             "Authorization" => env('JIRA_AUTHORIZATION')
-        ])
-            ->get($url);
+        ])->get($url);
+
         $json = $response->json();
         // Find the mistake :)
 //        $json = json_encode($response->json());

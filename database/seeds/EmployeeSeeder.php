@@ -13,11 +13,9 @@ class EmployeeSeeder extends Seeder
     {
         //
         DB::table('employees')->insert([
-            'forename'=>'',
-            'surename'=>'',
-//            'password'=>bcrypt('secret'),
-//            'email'=>str_random(10).'@example.com',
-            'role_id'=>'',
+            'forename'=>'Selcuk',
+            'surename'=>'Karateke',
+//            'role_id'=>1,
         ]);
     }
 }

@@ -13,8 +13,8 @@ class EmployeeProjectSeeder extends Seeder
     {
         //
         DB::table('employee_project')->insert(['employee_id' => '1','project_id' => '1',]);
-        DB::table('employee_project')->insert(['employee_id' => '2','project_id' => '1',]);
-        DB::table('employee_project')->insert(['employee_id' => '3','project_id' => '1',]);
-        DB::table('employee_project')->insert(['employee_id' => '4','project_id' => '1',]);
+        DB::table('employee_project')->insert(['employee_id' => '1','project_id' => '2',]);
+        DB::table('employee_project')->insert(['employee_id' => '1','project_id' => '3',]);
+        DB::table('employee_project')->insert(['employee_id' => '1','project_id' => '4',]);
     }
 }

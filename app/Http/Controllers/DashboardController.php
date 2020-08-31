@@ -30,11 +30,11 @@ class DashboardController extends Controller
         $id = Auth::id();
         //
         $projects = DB::table('projects')
-            ->where('employee_id', $id)
+//            ->where('employee_id', $id)
         ->count();
         //
         $tasks = DB::table('tasks')
-            ->where('employee_id', $id)
+//            ->where('employee_id', $id)
         ->count();
         //
         return view('dashboard', compact('projects', 'tasks'));
