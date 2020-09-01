@@ -48,7 +48,7 @@
                         <br/>Week:
                         {{$task->calendar_week}}
                         <br/>Programmer:
-                        {{$task->employee_id}}
+{{--                        {{$task->employee_id}}--}}
                     </td>
                     <td>{{$task->description}}</td>
                     <td>{{$task->status}}</td>

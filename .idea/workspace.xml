@@ -23,18 +23,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="488cd490-b14d-4cf3-8330-8058d6e95e00" name="Default Changelist" comment="Allow Vue.js to access the projects">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-bta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="488cd490-b14d-4cf3-8330-8058d6e95e00" name="Default Changelist" comment="Fixed some issues, customizations, added seeder bindings, renamed paths">
+      <change afterPath="$PROJECT_DIR$/.vscode/ftp-sync.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EmployeeProjectSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EmployeeProjectSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EmployeeSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EmployeeSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +225,9 @@
       <workItem from="1598734544924" duration="2770000" />
       <workItem from="1598776819542" duration="1367000" />
       <workItem from="1598796148058" duration="171000" />
-      <workItem from="1598796349900" duration="11651000" />
+      <workItem from="1598796349900" duration="16080000" />
+      <workItem from="1598890141100" duration="7998000" />
+      <workItem from="1598945163136" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="INitial Commit FAiled">
       <created>1597132366052</created>
@@ -317,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598777493245</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed some issues, customizations, added seeder bindings, renamed paths">
+      <created>1598856861000</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598856861000</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,9 +351,14 @@
     <MESSAGE value="Add new route to make all projects accessible to Vue.js" />
     <MESSAGE value="Add function to allow employees to assign a role." />
     <MESSAGE value="Allow Vue.js to access the projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow Vue.js to access the projects" />
+    <MESSAGE value="Fixed some issues, customizations, added seeder bindings, renamed paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues, customizations, added seeder bindings, renamed paths" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="186" key="#Deployment" timestamp="1598903244363">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="186" key="#Deployment/0.0.1920.1050@0.0.1920.1050" timestamp="1598903244363" />
     <state x="586" y="206" key="#Inspections" timestamp="1597928592362">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -359,6 +367,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="721" y="351" key="#Notifications/0.0.1920.1050@0.0.1920.1050" timestamp="1597132018248" />
+    <state x="639" y="242" key="#Options" timestamp="1598903258629">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="639" y="242" key="#Options/0.0.1920.1050@0.0.1920.1050" timestamp="1598903258629" />
     <state x="1221" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598300501584">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -371,6 +383,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="718" y="384" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050@0.0.1920.1050" timestamp="1598278169137" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1598903244845">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598903244845" />
+    <state x="92" y="92" width="1736" height="866" key="DirDiffDialog" timestamp="1598903244845">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="DirDiffDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598903244845" />
     <state x="740" y="269" key="FileChooserDialogImpl" timestamp="1598509531659">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -415,10 +435,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="926" y="182" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1597304702309" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1598777524969">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1598856888979">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598777524969" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598856888979" />
     <state x="1261" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597324655848">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -427,17 +447,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="669" y="151" width="581" height="747" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598357333565" />
-    <state x="858" y="438" key="publish.login" timestamp="1598796275463">
+    <state x="858" y="438" key="publish.login" timestamp="1598890653559">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="858" y="438" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1598796275463" />
+    <state x="858" y="438" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1598890653559" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1598537696728">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598537696728" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1597777193889">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1598879656101">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1597777193889" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598879656101" />
   </component>
 </project>

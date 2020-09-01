@@ -56,7 +56,7 @@ class TasksController extends Controller
         Task::create([
             'name' => $request->name,
             'description' => $request->description,
-            'employee_id' => 1,
+//            'employee_id' => 1,
             'status' => $request->status,
             'estimated_hours' => $request->estimated_hours,
             'actual_hours' => $request->actual_hours,
