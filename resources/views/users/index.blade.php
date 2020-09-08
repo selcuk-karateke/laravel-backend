@@ -7,6 +7,7 @@
     <a href="{{ route('users.create') }}"><i class="fas fa-user-plus fa-fw"></i></a>
 @endsection
 @section('section-1')
+<div style="height: 80vh;">
     <div class="links">
         <a href="{{ url('/dashboard') }}">Dashboard</a>
         <a href='{{ url('/projects') }}'>Projects</a>
@@ -23,6 +24,7 @@
     <div class="sub-title">
         {{ __('Hi') }}, {{ Auth::user()->name }}!
     </div>
+</div>
 @endsection
 @section('section-2')
     <div class="table-responsive">

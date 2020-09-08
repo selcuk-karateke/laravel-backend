@@ -24,12 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488cd490-b14d-4cf3-8330-8058d6e95e00" name="Default Changelist" comment="Fixed some issues, customizations, added seeder bindings, renamed paths">
-      <change afterPath="$PROJECT_DIR$/.vscode/ftp-sync.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/laravel-backend.code-workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/ftp-sync.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/ftp-sync.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,7 @@
       <workItem from="1598796148058" duration="171000" />
       <workItem from="1598796349900" duration="16080000" />
       <workItem from="1598890141100" duration="7998000" />
-      <workItem from="1598945163136" duration="1197000" />
+      <workItem from="1598945163136" duration="1598000" />
     </task>
     <task id="LOCAL-00001" summary="INitial Commit FAiled">
       <created>1597132366052</created>

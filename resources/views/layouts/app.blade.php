@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>App</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"/>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -55,33 +58,22 @@
         display: table-cell;
     }
     #leftdiv {
-        /*border: 3px solid red;*/
+        /* border: 3px solid red; */
         height: 100%;
     }
     #rightdiv {
-        /*border: 3px solid green;*/
+        /* border: 3px solid green; */
         /*height: 100%;*/
     }
 </style>
 <div class="container-fluid" id="wrapper">
     <div class="row">
-        <div class="col-md-10 main" id="leftdiv">
-            <section class="col-12">
-                @yield('section-1')
-            </section>
-            <section class="col-12 flex-3 ">
-                @yield('section-2')
-            </section>
-            <section class="col-12 flex-1">
-                @yield('section-3')
-            </section>
-        </div>
         <style>
             a > i {
                 font-size: large;
             }
         </style>
-        <div class="col-md-2 aside" id="rightdiv" >
+        <div class="col-md-2 order-md-2 aside" id="rightdiv" >
             <div class="links">
                 @if (Route::has('login'))
                     @auth
@@ -102,6 +94,17 @@
                 @endif
                 @yield('aside')
             </div>
+        </div>
+        <div class="col-md-10 order-md-1 main" id="leftdiv">
+            <section class="col-12">
+                @yield('section-1')
+            </section>
+            <section class="col-12 flex-3 ">
+                @yield('section-2')
+            </section>
+            <section class="col-12 flex-1">
+                @yield('section-3')
+            </section>
         </div>
     </div>
 </div>

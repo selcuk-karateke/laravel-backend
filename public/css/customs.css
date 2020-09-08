@@ -3,6 +3,8 @@ html, body {
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, p {
