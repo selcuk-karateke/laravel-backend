@@ -16,8 +16,14 @@ class Cors
     public function handle($request, Closure $next)
     {
         // Whitelist
-        $domains = ['http://localhost:8080','http://localhost:63342'];
-//dd($request);
+        $domains = [
+            'http://localhost:8080',
+            'http://localhost:63342',
+            'http://sellskitchen.de',
+            'http://www.sellskitchen.de',
+            'https://sellskitchen.de',
+            'https://www.sellskitchen.de',
+        ];
         // Check HTTP_ORIGIN
         if(isset($request->server()['HTTP_ORIGIN'])) {
             $origin = $request->server()['HTTP_ORIGIN'];
